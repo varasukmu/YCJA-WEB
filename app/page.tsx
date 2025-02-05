@@ -1,7 +1,10 @@
+import Link from "next/link"
+
 function page() {
   return (
     <>
-    <div>Home Page</div>
+    <div>This is landing page </div>
+    <Link href="/home">Click here</Link>
     
     
     </>

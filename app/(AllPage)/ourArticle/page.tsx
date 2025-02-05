@@ -1,6 +1,6 @@
 function article() {
   return (
-    <div>article</div>
+    <div>News</div>
   )
 }
 export default article
