@@ -1,3 +1,6 @@
+import WhatAreWe from "./WhatAreWe";
+import WhatWeDo from "./WhatWeDo";
+
 function HomePage() {
   return (
     <>
@@ -15,7 +18,10 @@ function HomePage() {
       </div>
     </div>
     
-
+    <WhatAreWe/>
+    <div className="h-[100px]"></div>
+    <hr className="bg-black mx-20 text-2xl border-2  "/>
+    <div className="h-[100px]"></div>
     
     </>
   );
