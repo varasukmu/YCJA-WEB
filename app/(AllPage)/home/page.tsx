@@ -1,3 +1,6 @@
+import WhatAreWe from "./WhatAreWe";
+import WhatWeDo from "./WhatWedo";
+
 function HomePage() {
   return (
     <>
@@ -14,9 +17,8 @@ function HomePage() {
         </div>
       </div>
     </div>
-    
-
-    
+    <WhatWeDo />
+    <WhatAreWe />
     </>
   );
 }
