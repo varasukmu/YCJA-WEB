@@ -70,7 +70,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Define the type of a single post for TypeScript
 type Post = {
   _id: string;
   title: string;
@@ -84,7 +83,8 @@ export default function Admin() {
 
   const getPosts = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/posts", {
+      // เปลี่ยน URL จาก localhost เป็น relative path
+      const res = await fetch("/api/posts", { // <-- เปลี่ยนตรงนี้
         method: "GET",
         cache: "no-store",
       });
@@ -114,7 +114,6 @@ export default function Admin() {
         <Link href="/admin/create">Create Post</Link>
       </button>
 
-      {/* Show error message if fetch fails */}
       {error && <p className="text-red-500">{error}</p>}
 
       <div className="grid grid-cols-4 mt-3 gap-5">
