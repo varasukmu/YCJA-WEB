@@ -1,6 +1,5 @@
-function joinUs() {
+export default function joinUs() {
     return (
       <div>JOIN US</div>
     )
   }
-  export default joinUs

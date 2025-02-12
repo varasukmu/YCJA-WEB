@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-function page() {
+export default function page() {
   return (
     <>
     <div>This is landing page </div>
@@ -10,4 +10,3 @@ function page() {
     </>
   )
 }
-export default page

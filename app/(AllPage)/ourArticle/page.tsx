@@ -1,6 +1,5 @@
-function article() {
+export default function article() {
   return (
     <div>News</div>
   )
 }
-export default article

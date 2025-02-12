@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-function story() {
+export default function story() {
   return (
     <>
     <div className="mt-[var(--navbar-height)]" id="firstPage">
@@ -25,4 +25,3 @@ function story() {
     </>
   )
 }
-export default story

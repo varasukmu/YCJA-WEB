@@ -1,4 +1,4 @@
-function WhatWeDo() {
+export default function WhatWeDo() {
     return (
       <>
       <div id="mission" className="textHead pt-10 text-center w-full">Our Mission</div>
@@ -23,4 +23,3 @@ function WhatWeDo() {
       </>
     )
   }
-  export default WhatWeDo

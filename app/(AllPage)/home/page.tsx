@@ -1,7 +1,7 @@
 import WhatAreWe from "./WhatAreWe";
 import WhatWeDo from "./WhatWeDo";
 
-function HomePage() {
+export default function HomePage() {
   return (
     <>
     <div className="mt-[var(--navbar-height)]" id="firstPage">
@@ -36,5 +36,3 @@ function HomePage() {
     </>
   );
 }
-
-export default HomePage;

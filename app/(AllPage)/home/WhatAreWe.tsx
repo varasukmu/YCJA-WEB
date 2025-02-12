@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-function WhatAreWe() {
+export default function WhatAreWe() {
 
   const images = [
     '/test.jpg',
@@ -81,4 +81,4 @@ function WhatAreWe() {
       </>
     )
   }
-  export default WhatAreWe
+  
