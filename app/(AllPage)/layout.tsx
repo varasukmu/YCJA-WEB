@@ -1,5 +1,7 @@
 import Navbar from './component/Navbar1';
-const layout = ({children}) => {
+import { ReactNode } from "react";
+
+const layout = ({children}: { children: ReactNode }) => {
   return (
     <html>
       <body>

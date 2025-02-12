@@ -1,17 +1,15 @@
-"use client"
+"use client";
 
-import React, { useState, useEffect} from "react";
-// import Link from 'next/link';
-// import { useRouter } from 'next/navigation';
+import { NextPage } from "next";
 
-function EditPost({ params }) {
-
-    const { id } = params;
-    
-  return (
-    <div>
-        {id}
-    </div>
-  )
+interface EditPostProps {
+  params: { id: string };
 }
-export default EditPost
+
+const EditPost: NextPage<EditPostProps> = ({ params }) => {
+  const { id } = params;
+
+  return <div>Post ID: {id}</div>;
+};
+
+export default EditPost;

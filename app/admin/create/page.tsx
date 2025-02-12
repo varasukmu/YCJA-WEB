@@ -12,7 +12,7 @@ export default function createPost() {
 
     const router = useRouter();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
 
       if (!title || !img || !content) {
@@ -56,7 +56,7 @@ export default function createPost() {
               type="text" placeholder="Enter Google Drive File ID"
               className="w-[300px] block bg-gray-200 border py-2 px-3 rounded text-lg my-2"/>          
             <textarea onChange={(e) => setContent(e.target.value)}
-              cols='30' rows='10' placeholder="Content"
+              cols={30} rows={10} placeholder="Content"
               className="x-[300px] block bg-gray-200 border py-2 px-3 rounded text-lg my-2" ></textarea>
             <button type='submit' className="bg-green-500 text-white border py-2 px-3 rounded text-lg my-2">Create Post</button>
         </form>

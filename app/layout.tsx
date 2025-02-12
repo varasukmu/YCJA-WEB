@@ -1,6 +1,7 @@
 import './globals.css';
+import { ReactNode } from "react";
 
-const layout = ({children}) => {
+const layout = ({children}: { children: ReactNode }) => {
   return (
     <html>
       
