@@ -49,7 +49,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  const [navHeight, setNavHeight] = useState(0);
+  const [_navHeight, setNavHeight] = useState(0);
 
   useEffect(() => {
     const navbar = document.getElementById("navbar");

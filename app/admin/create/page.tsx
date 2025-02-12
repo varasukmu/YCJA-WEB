@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function createPost() {
+export default function CreatePost() {
 
     const [title, setTitle] = useState("");
     const [img, setImg] = useState("");
