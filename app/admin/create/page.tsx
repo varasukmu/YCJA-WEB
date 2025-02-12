@@ -21,7 +21,7 @@ export default function CreatePost() {
 
     try {
       // ใช้ process.env เพื่อดึง URL ที่ตั้งค่าไว้ในไฟล์ .env
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, {
+      const res = await fetch("/api/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
