@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-function createPost() {
+export default function createPost() {
 
     const [title, setTitle] = useState("");
     const [img, setImg] = useState("");
@@ -63,4 +63,3 @@ function createPost() {
     </div>
   )
 }
-export default createPost
