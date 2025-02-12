@@ -122,11 +122,11 @@ export default function Admin() {
             <div key={val._id} className="shadow-xl my-5 p-10 rounded-xl">
               <h4>{val.title}</h4>
               <Image
-                src={val.img}
+                src= {`https://drive.google.com/uc?export=view&id=${val.img}`}
                 width={300}
-                height={200} // Adjust height as necessary
+                height={200} 
                 alt={val.title}
-                layout="intrinsic" // This keeps the image proportional
+                layout="intrinsic" 
               />
               <p>{val.content}</p>
               <div className="mt-5">
