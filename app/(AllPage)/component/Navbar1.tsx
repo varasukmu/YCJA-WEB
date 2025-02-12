@@ -92,7 +92,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Navbar() {
   // ลบการประกาศ navHeight ถ้าคุณไม่ใช้
