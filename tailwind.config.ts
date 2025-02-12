@@ -1,3 +1,4 @@
+import { title } from "process";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -13,6 +14,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        Mali: ["Mali", "sans-swrlf"],
+      }
     },
   },
   plugins: [],

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,6 +24,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
+
 .button {
   background-color: var(--MyYellow);
   color:black;
@@ -33,4 +36,9 @@ body {
   @apply text-5xl;
   color: var(--MyYellow);
   font-weight: bold;
+}
+
+.navbar {
+  @apply fixed w-full top-0 left-0 z-10 flex justify-between text-white p-5 font-bold text-xl shadow-md font-Mali bg-green-950;
+  /* background: darkcyan; */
 }

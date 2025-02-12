@@ -1,4 +1,22 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
 function WhatAreWe() {
+
+  const images = [
+    '/test.jpg',
+    '/test.jpg',
+    '/test.jpg',
+    '/test.jpg',
+    '/test.jpg',
+    '/test.jpg',
+    '/test.jpg',
+    '/test.jpg',
+    '/test.jpg'
+  ];
+
     return (
       <>
       <div className="w-full flex justify-center">
@@ -19,10 +37,14 @@ function WhatAreWe() {
         </div>
   
         <div className="w-full grid grid-rows-3 gap-5">
-          {["OUR MISSION", "OUR STORY", "OUR NETWORK"].map((text, index) => (
+          {[
+            { text:"OUR MISSION", path:"/story"},
+            { text:"OUR STORY", path:"/story"}, 
+            { text:"OUR NETWORK", path:"/story"}
+          ].map((item, index) => (
           <div key={index} className="flex h-full">
             <div className="w-3 bg-green-950"></div>
-            <div
+            <Link href={item.path}
               className="w-full font-bold text-5xl text-white text-  p-5 items-center relative"
               style={{
                 backgroundImage: "url('/wrv.jpg')",
@@ -31,16 +53,31 @@ function WhatAreWe() {
               }}
             >
               <div className="absolute top-0 left-0 w-full h-full bg-green-300 opacity-20" />
-              <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-start">{text}</div>
-            </div>
+              <div className="absolute top-1/2 left-5 transform -translate-y-1/2 text-start">{item.text}</div>
+            </Link>
           </div>
           ))}
         </div>
       </div>
       </div>
+
+
+      <div className="h-[100px]"></div>
+        
+      <div className="flex justify-center items-center gap-5 overflow-x-auto w-full m-2">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className="h-[270px] w-[360px] text-white flex-shrink-0"
+            style={{
+              backgroundImage: `url(${img})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          ></div>
+        ))}
+      </div>
   
-  
-      <div className="h-[500px]"></div>
       </>
     )
   }

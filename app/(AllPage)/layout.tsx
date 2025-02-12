@@ -1,4 +1,4 @@
-import Navbar from './component/Navbar';
+import Navbar from './component/Navbar1';
 import homePage from './home/page';
 const layout = ({children}) => {
   return (

@@ -4,7 +4,7 @@ import WhatWeDo from "./WhatWeDo";
 function HomePage() {
   return (
     <>
-    <div className="mt-[var(--navbar-height)]">
+    <div className="mt-[var(--navbar-height)]" id="firstPage">
       <div 
         className="h-[450px] text-white"
         style={{ backgroundImage: "url('/headPic.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
@@ -18,10 +18,20 @@ function HomePage() {
       </div>
     </div>
     
-    <WhatAreWe/>
-    <div className="h-[100px]"></div>
-    <hr className="bg-black mx-20 text-2xl border-2  "/>
-    <div className="h-[100px]"></div>
+    <div id="second-page">
+      <WhatAreWe/>
+      <div className="h-[100px]"></div>
+      <hr className="bg-black mx-20 text-2xl border-2  "/>
+      <div className="h-[10px]"></div>
+    </div>
+
+    <div id="third-page">
+      <WhatWeDo/>
+      <div className="h-[100px]"></div>
+      <hr className="bg-black mx-20 text-2xl border-2  "/>
+      <div className="h-[100px]"></div>
+    </div>
+    
     
     </>
   );

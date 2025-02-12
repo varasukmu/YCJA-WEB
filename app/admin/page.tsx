@@ -50,7 +50,7 @@ export default function admin() {
               <Image src={val.img} width={300} height={20} alt={val.title}/>
               <p>{val.content}</p>
               <div className="mt-5">
-                <Link href={`/edit/${val.id}`} className="bg-gray-500  text-white border px-3 py-2 rounded-md text-lg">Edit</Link>
+                <Link href={`admin/edit/${val._id}`} className="bg-gray-500  text-white border px-3 py-2 rounded-md text-lg">Edit</Link>
                 <Link href="/edit" className="bg-red-500   text-white border px-3 py-2 rounded-md text-lg">Delete</Link>
               </div>
             </div>
