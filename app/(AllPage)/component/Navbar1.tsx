@@ -120,8 +120,8 @@ export default function Navbar() {
       <div className="flex justify-between w-1/2 font-bold">
         {[ 
           { id: "firstPage", label: "HOME" },
-          { id: "second-page", label: "What We Do" },
-          { id: "third-page", label: "What Are We" },
+          { id: "second-page", label: "What Are We" },
+          { id: "third-page", label: "What We Do" },
         ].map(({ id, label}) =>
           <button key={id} onClick={() => scrollToSection(id)} className="hover:text-orange-400 transition-all duration-300">
             {label}

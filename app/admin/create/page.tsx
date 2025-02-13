@@ -8,13 +8,14 @@ export default function CreatePost() {
   const [title, setTitle] = useState("");
   const [img, setImg] = useState("");
   const [content, setContent] = useState("");
+  const [catalog, setCatalog] = useState("");
 
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!title || !img || !content) {
+    if (!title || !img || !content || !catalog) {
       alert("Please complete all inputs!");
       return;
     }
@@ -25,7 +26,7 @@ export default function CreatePost() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, img, content }),
+        body: JSON.stringify({ title, img, content, catalog }),
       });
 
       if (res.ok) {
@@ -56,9 +57,15 @@ export default function CreatePost() {
           className="x-[300px] block bg-gray-200 border py-2 px-3 rounded text-lg my-2"
           placeholder="Post Title"
         />
+        <select onChange={(e) => setCatalog(e.target.value)} className="w-[300px] bg-gray-200 border py-2 px-3 rounded text-lg my-2">
+          <option value="">Select Catalog</option>
+          {["A", "B", "C", "D", "E"].map((cat) => (
+            <option key={cat} value={cat}>{cat}</option>
+          ))}
+        </select>
         <input
           onChange={(e) =>
-            setImg(`https://drive.google.com/uc?export=view&id=${e.target.value.trim()}`)
+            setImg(e.target.value.trim())
           }
           type="text"
           placeholder="Enter Google Drive File ID"

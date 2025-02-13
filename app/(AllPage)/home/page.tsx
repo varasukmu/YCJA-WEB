@@ -20,7 +20,7 @@ export default function HomePage() {
     
     <div id="second-page">
       <WhatAreWe/>
-      <div className="h-[100px]"></div>
+      <div className="h-[50px]"></div>
       <hr className="bg-black mx-20 text-2xl border-2  "/>
       <div className="h-[10px]"></div>
     </div>

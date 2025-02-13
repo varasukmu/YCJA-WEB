@@ -75,6 +75,7 @@ type Post = {
   title: string;
   content: string;
   img: string;
+  catalog: string;
 };
 
 export default function Admin() {
@@ -116,18 +117,22 @@ export default function Admin() {
 
       {error && <p className="text-red-500">{error}</p>}
 
-      <div className="grid grid-cols-4 mt-3 gap-5">
+      <div 
+        // className="grid grid-cols-4 mt-3 gap-5"
+        className="flex flex-wrap gap-5">
         {postData && postData.length > 0 ? (
           postData.map((val) => (
-            <div key={val._id} className="shadow-xl my-5 p-10 rounded-xl">
-              <h4>{val.title}</h4>
+            <div key={val._id} className="relative shadow-xl my-5 p-10 rounded-xl max-w-[300px] max-h-[500px] ">
+              <div className="bg-slate-200 p-2 rounded-lg text-slate-600">{val.catalog}</div>
               <Image
                 src= {`https://drive.google.com/uc?export=view&id=${val.img}`}
                 width={300}
                 height={200} 
                 alt={val.title}
-                layout="intrinsic" 
+                layout="intrinsic"
+                className="my-3"
               />
+              <div className="text-xl font-bold ">{val.title}</div>
               <p>{val.content}</p>
               <div className="mt-5">
                 <Link
