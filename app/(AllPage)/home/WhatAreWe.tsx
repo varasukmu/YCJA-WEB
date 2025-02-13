@@ -38,9 +38,9 @@ export default function WhatAreWe() {
   
         <div className="w-full grid grid-rows-3 gap-5">
           {[
-            { text:"OUR MISSION", path:"/story"},
+            { text:"OUR MISSION", path:""},
             { text:"OUR STORY", path:"/story"}, 
-            { text:"OUR NETWORK", path:"/story"}
+            { text:"OUR NETWORK", path:""}
           ].map((item, index) => (
           <div key={index} className="flex h-full">
             <div className="w-3 bg-green-950"></div>
